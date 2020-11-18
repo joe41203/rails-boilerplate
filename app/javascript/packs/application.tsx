@@ -1,21 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 interface HelloProps {
-  name: string;
+  name: string
 }
 
-const Hello: React.SFC<HelloProps> = props => (
-  <div>Hello {props.name}!</div>
+const Hello: React.SFC<HelloProps> = (props) => (
+  <div>
+    <p>Hello {props.name} !</p>
+  </div>
 )
 
 Hello.defaultProps = {
-  name: "David",
+  name: 'David',
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement("div")),
-  )
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(<Hello name="React & TypeScript" />, document.body.appendChild(document.createElement('div')))
 })
