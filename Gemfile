@@ -21,11 +21,26 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rename'
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '>= 1.4.2', :require => false
+gem 'dotenv-rails'
+gem 'config'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem "pry-byebug"
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'byebug', :platforms => [:mri, :mingw, :x64_mingw]
+  gem 'rubocop', :require => false
+  gem 'rubocop-performance', :require => false
+  gem 'rubocop-rails', :require => false
+  gem 'rubocop-rspec'
 end
 
 group :development do
@@ -38,4 +53,4 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', :platforms => [:mingw, :mswin, :x64_mingw, :jruby]

@@ -1,0 +1,21 @@
+inherit_from: .rubocop_todo.yml
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.7.1
+  TargetRailsVersion: 6.0
+  NewCops: enable
+  Exclude:
+    - "vendor/**/*"
+    - "bin/**/*"
+    - "db/**/*"
+    - "tmp/**/*"
+    - "node_modules/**/*"
+    - "lib/tasks/auto_annotate_models.rake"
+    - "spec/**/*"
