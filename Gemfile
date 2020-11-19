@@ -24,6 +24,7 @@ gem 'rename'
 gem 'bootsnap', '>= 1.4.2', :require => false
 gem 'dotenv-rails'
 gem 'config'
+gem 'graphql'
 
 group :development, :test do
   gem 'pry-rails'
@@ -51,6 +52,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pretty_validation'
+  gem 'graphiql-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
